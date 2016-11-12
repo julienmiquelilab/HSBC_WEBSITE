@@ -1,13 +1,14 @@
 ActiveAdmin.register Transaction do
 
+  permit_params :amount, :transmitter, :bank_account_id 
+
   index do
     id_column
     column 'Receiver' do |resource|
       link_to resource.bank_account.user.full_name, admin_user_path(resource)
     end
     column :amount
-    column :first_name
-    column :last_name
+    column :transmitter
 
   end
 
