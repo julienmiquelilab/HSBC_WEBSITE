@@ -18,6 +18,8 @@ ActiveAdmin.setup do |config|
   #
   # config.site_title_image = "logo.png"
 
+  config.skip_before_filter :load_footer_variables
+
   # == Default Namespace
   #
   # Set the default namespace each administration resource
@@ -269,4 +271,8 @@ ActiveAdmin.setup do |config|
   # of those filters by default here.
   #
   # config.include_default_association_filters = true
+end
+
+module ActiveAdmin::ViewHelpers
+  include ApplicationHelper
 end
