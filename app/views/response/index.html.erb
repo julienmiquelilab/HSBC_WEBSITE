@@ -1,0 +1,27 @@
+<section class="center">
+  <%= image_tag 'hsbc', class: 'center'%>
+</section>
+<section>
+  <div class="container mrg-t-30">
+    <div class="center">
+
+      <h2>Bienvenue sur cette borne HSBC</h2>
+      <p>Vous pouvez poser vos questions oralement sur cette borne.</p>
+      <% if current_user%>
+        <% @responses.each do |response|%>
+        <div class="jumbotron mrg-t-30">
+          <%=response%>
+        </div>
+        <%end%>
+
+
+      <%else%>
+        <p class="red">Vous devez d'abord vous connetecez en passant votre badge sur le lecteur de carte.</p>
+        <p class="mrg-t-30">
+          <%= button_to "Se connecter", new_user_session_path, class: "btn btn-primary"%>
+        <p>
+      <%end%>
+    </div>
+  </div>
+
+</section>

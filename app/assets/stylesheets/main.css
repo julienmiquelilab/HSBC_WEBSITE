@@ -1,0 +1,17 @@
+.center{
+  text-align: center;
+}
+.mrg-t-30{
+  margin-top: 30px;
+}
+.mrg-b-30{
+  margin-bottom: 30px;
+}
+
+.red{
+  color: #E12523;
+}
+
+p{
+  font-size: 120%;
+}
