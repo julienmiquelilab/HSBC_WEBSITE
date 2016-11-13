@@ -15,3 +15,11 @@
 p{
   font-size: 120%;
 }
+
+.jumbotron{
+  border: 2px solid black;
+}
+
+.grey{
+  color: grey;
+}

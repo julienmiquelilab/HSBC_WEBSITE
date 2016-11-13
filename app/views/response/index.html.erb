@@ -13,7 +13,7 @@
           <%=response%>
         </div>
         <%end%>
-
+      <%= button_to 'Deconnexion' ,destroy_user_session_path, method: :delete,  class: "btn btn-primary"%>
 
       <%else%>
         <p class="red">Vous devez d'abord vous connetecez en passant votre badge sur le lecteur de carte.</p>

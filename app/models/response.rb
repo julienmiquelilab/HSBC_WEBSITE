@@ -10,7 +10,7 @@ class Response < ActiveRecord::Base
 
   def to_s
     html = "<h2>#{intent}</h2>"
-    html += " <p>#{response_text}</p>"
+    html += " <p class='grey'>#{response_text}</p>"
     html.html_safe
   end
 end
