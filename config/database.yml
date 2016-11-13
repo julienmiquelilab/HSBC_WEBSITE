@@ -11,3 +11,11 @@ development:
   user: unczqqvzlojmpw
   port: 5432
   password: B7D3rItlgMe3xMS2dTQR0ll4sE
+
+production:
+  adapter: postgresql
+  host: ec2-54-217-208-46.eu-west-1.compute.amazonaws.com
+  database: detkocfri7srd6
+  user: unczqqvzlojmpw
+  port: 5432
+  password: B7D3rItlgMe3xMS2dTQR0ll4sE
