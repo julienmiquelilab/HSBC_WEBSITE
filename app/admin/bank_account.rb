@@ -7,7 +7,7 @@ ActiveAdmin.register BankAccount do
     column 'Owner' do |resource|
       link_to resource.user.full_name, admin_user_path(resource)
     end
-    column do |resource|
+    column 'Balance' do |resource|
       (resource.balance/100).to_s + " €"
     end
     column :category

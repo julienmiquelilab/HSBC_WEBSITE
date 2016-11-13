@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-
+  permit_params :emai, :first_name, :last_name, :birthdate
   index do
     id_column
     column :email
@@ -18,6 +18,7 @@ ActiveAdmin.register User do
       f.input :birthdate
 
     end
+    actions
   end
 
   show do |user|

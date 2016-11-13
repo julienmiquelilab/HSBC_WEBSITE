@@ -6,9 +6,8 @@ ActiveAdmin.register Response do
     id_column
     column :intent
     column :response_text
-    t.string :intent
-    column do |resource|
-      resource.user.full_name
+    column 'User' do |resource|
+      link_to resource.user, admin_user_path(resource)
     end
 
 

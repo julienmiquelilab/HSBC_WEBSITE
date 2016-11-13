@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # RELATIONS
-  has_many :requests
+  has_many :responses
   has_many :bank_accounts
 
   # VALISATIONS
@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
   # METHODS
   def full_name
     [first_name, last_name].join(' ')
+  end
+
+  def to_s
+    full_name
   end
 
 end

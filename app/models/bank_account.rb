@@ -9,4 +9,8 @@ class BankAccount < ActiveRecord::Base
 
   # CATEGGORY
   enum category: ["Livret A", "Compte épargne"]
+
+  def to_s
+    [user.full_name, category].join(' - ')
+  end
 end

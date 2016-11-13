@@ -1,11 +1,11 @@
 ActiveAdmin.register Transaction do
 
-  permit_params :amount, :transmitter, :bank_account_id 
+  permit_params :amount, :transmitter, :bank_account_id
 
   index do
     id_column
     column 'Receiver' do |resource|
-      link_to resource.bank_account.user.full_name, admin_user_path(resource)
+      link_to(resource.bank_account, admin_bank_account_path(resource.bank_account))
     end
     column :amount
     column :transmitter
@@ -23,9 +23,9 @@ ActiveAdmin.register Transaction do
     actions
   end
 
-  show do |user|
+  show do |transaction|
     panel "Transation" do
-      attributes_table_for user do
+      attributes_table_for transaction do
         row 'Receiver' do |resource|
           link_to resource.bank_account.user.full_name, admin_user_path(resource)
         end
