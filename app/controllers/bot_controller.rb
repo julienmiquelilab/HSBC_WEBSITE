@@ -11,7 +11,7 @@ class BotController < ApplicationController
               "data": "",
               "source": "Louis"
             }
-
+    #TestMailer.api_hook_info_mailer(params, response)
     render json: response
   end
 end
