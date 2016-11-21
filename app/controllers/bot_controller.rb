@@ -1,4 +1,5 @@
 class BotController < ApplicationController
+  protect_from_forgery with: :null_session
 
   def slack
     process = params[:result][:parameters][:process]
