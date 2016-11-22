@@ -7,5 +7,6 @@ class UpdateResponseTable < ActiveRecord::Migration
     add_column :responses, :data, :string
     add_column :responses, :source, :string
     add_column :responses, :parameter_value, :string
+    rename_column :responses, :intent, :action
   end
 end

@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20161122154844) do
   end
 
   create_table "responses", force: :cascade do |t|
-    t.string   "intent"
+    t.string   "action"
     t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
