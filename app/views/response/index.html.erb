@@ -13,12 +13,12 @@
           <%=response%>
         </div>
         <%end%>
-      <%= button_to 'Deconnexion' ,destroy_user_session_path, method: :delete,  class: "btn btn-primary"%>
+      <%#= button_to 'Deconnexion' ,destroy_user_session_path, method: :delete,  class: "btn btn-primary"%>
 
       <%else%>
         <p class="red">Vous devez d'abord vous connetecez en passant votre badge sur le lecteur de carte.</p>
         <p class="mrg-t-30">
-          <%= button_to "Se connecter", new_user_session_path, class: "btn btn-primary"%>
+          <%#= button_to "Se connecter", new_user_session_path, class: "btn btn-primary"%>
         <p>
       <%end%>
     </div>

@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122172719) do
+ActiveRecord::Schema.define(version: 20161130143728) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "account_types", force: :cascade do |t|
+    t.string  "kind"
+    t.integer "overdraft_max"
+    t.integer "overdraft_min"
+    t.integer "rate"
+    t.integer "celling"
+  end
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer "balance"
+    t.integer "overdraft_value_max"
+    t.integer "account_type_id"
+    t.integer "client_id"
+    t.integer "card_type_id"
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -49,17 +66,38 @@ ActiveRecord::Schema.define(version: 20161122172719) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "bank_accounts", force: :cascade do |t|
-    t.integer  "balance"
-    t.integer  "category"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "advisors", force: :cascade do |t|
+    t.string  "lastname"
+    t.string  "firstname"
+    t.string  "email"
+    t.string  "phone_number"
+    t.integer "agency_id"
+  end
+
+  create_table "agencies", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "phone_number"
+  end
+
+  create_table "card_types", force: :cascade do |t|
+    t.string "kind"
+    t.text   "advantages"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string  "lastname"
+    t.string  "firstname"
+    t.date    "birthdate"
+    t.string  "email"
+    t.string  "login"
+    t.string  "password"
+    t.integer "agency_id"
+    t.integer "advisor_id"
   end
 
   create_table "responses", force: :cascade do |t|
     t.string   "action"
-    t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.text     "speech"
@@ -69,37 +107,11 @@ ActiveRecord::Schema.define(version: 20161122172719) do
     t.string   "parameter_value"
   end
 
-  create_table "transactions", force: :cascade do |t|
-    t.integer  "bank_account_id"
-    t.integer  "amount"
-    t.string   "transmitter"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+  create_table "transfers", force: :cascade do |t|
+    t.integer "amount"
+    t.text    "description"
+    t.integer "receiver_account_id"
+    t.integer "sender_account_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "birthdate"
-    t.string   "email"
-    t.string   "type"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  add_foreign_key "bank_accounts", "users"
-  add_foreign_key "responses", "users"
-  add_foreign_key "transactions", "bank_accounts"
 end

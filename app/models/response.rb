@@ -1,6 +1,5 @@
 class Response < ActiveRecord::Base
   # RELATIONS
-  belongs_to :user
 
   # VALIDATIONS
   validates :display_text, :action, :parameter_value, presence: true
