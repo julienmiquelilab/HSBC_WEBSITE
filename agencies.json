@@ -1,0 +1,359 @@
+{
+  "html_attributions": [],
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.86203099999999,
+          "lng": 2.3504842
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.8620621,
+            "lng": 2.35065775
+          },
+          "southwest": {
+            "lat": 48.8619377,
+            "lng": 2.34996355
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "64a63355ecb55a9849bf8202f8d498ddaa0769fd",
+      "name": "HSBC",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJR5nXXhlu5kcR7n35zrE65-k",
+      "reference": "CmRSAAAASq05qB3gI2dQTEa3z2ORNDr8xiXU0BX9koaRuFzbDtgOeBTGxBa960ElsGeje4pui0Aw1XoXeF6DkuRLBBFloS76CMHYZeQtx0NFvU3DQlzuyd1xekqladGzPr-Uet53EhCyUl42Hh91PWbuFMfOqijlGhTUcfQcvToxaRFERUlyBwjMuWW4Pg",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "42 Boulevard de Sébastopol, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.86519209999999,
+          "lng": 2.3605451
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.86524409999999,
+            "lng": 2.36060835
+          },
+          "southwest": {
+            "lat": 48.8650361,
+            "lng": 2.360355350000001
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "49a4295682a496832cc287d8c3ba419bfb015d03",
+      "name": "HSBC Paris Temple",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "photos": [
+        {
+          "height": 5312,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111249797424168992277/photos\">Stéphane B</a>"
+          ],
+          "photo_reference": "CoQBdwAAAB68TWzL5EmDvgXwJX7QqduAXvwBh-LBqHUK_e7hnVNooowBmIBjaxrD0ARfYXAhg1tjUb7BZMHal5Tx5cDBJoaTErGSzutn4VjtkfJ1yKPrfn5aXRn4N9f8For1-v3idOZl4RmbGiQcWK2kIjN8zGj7muXE8zgzWfL_H53vGMN_EhCzxVvqla_9RWiR4R5o3T3NGhRZCsTzjPnlZlmALESUWrUVxQERzA",
+          "width": 2988
+        }
+      ],
+      "place_id": "ChIJiV2sOGtw5kcRTm3E70XBtFU",
+      "reference": "CmRRAAAAKpY3cwzLjTF6Fkwy4laBUfth3tY_9yVI_gWdDMIeb6AtnOGp6PyNJuDLiMlALvPOD9gJxhy8dgTjxNrMDHxsnS6-F6GHIofhiQKI4l64aHrC3jcZiHXyxQJdw_rJJNrlEhALoJZc5nBU3LGHKwwoF27oGhSgQ2kjj3XU0zW-MvStVrozISBQzQ",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "158bis Rue du Temple, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.8521295,
+          "lng": 2.3385403
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.85214945000001,
+            "lng": 2.3387239
+          },
+          "southwest": {
+            "lat": 48.85206965,
+            "lng": 2.3384791
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "1f3f89f7552940ab9860bc50e252890edf940d3e",
+      "name": "HSBC Paris Odeon",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "photos": [
+        {
+          "height": 1824,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101906135633993482487/photos\">Kimi Kover Wu</a>"
+          ],
+          "photo_reference": "CoQBdwAAAH7rRFYdyXT66iM6hFQpFbbic2Mad0p8Y2-1o45YHSQonV-lMqPgBygZvP4MfD3MeK5ZFw-vI8NUDGTtmEc56VdZ5MYUsA10Ld8gndnKv-w8gvNBvmzrCacwAWOmf4SKC9FUxFYjHL8BD-Z1mQtr8KMqGyh7aenP6BT-N0fgtQZiEhChg7e2IoE6N0gzYc95kO3PGhTwyTQkKfvCTvvTp58ztkQIYFLXiQ",
+          "width": 3232
+        }
+      ],
+      "place_id": "ChIJzyias95x5kcRENSDZbleOw8",
+      "reference": "CmRRAAAAsnlsHhh-WKGrznSevQqFFx3jS7bidDQBqKVUWW_LOohR8NX2MBznz8NbtwPQHSRO5SuSSt_yDlFVmEBl48UUqjfRCH2B2gtD73CDj9X4awT4-ZHo0TEvUFAn2ueMbJ6UEhAb3745QO0huy3B5tVfFu-aGhReTmZKSYQDeZiW546MaKCA36mVeg",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2 Carrefour de l'Odéon, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.8561372,
+          "lng": 2.3566854
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.85618699999999,
+            "lng": 2.35675345
+          },
+          "southwest": {
+            "lat": 48.8561206,
+            "lng": 2.35648125
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "29c31a98770a40dc6602a25498dd4fbc0b80a89e",
+      "name": "HSBC",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111821958046153080911/photos\">aurelien Lej</a>"
+          ],
+          "photo_reference": "CoQBdwAAAJ3DMHgbrCP63JbEW93lht63hlp1NBj0kS5KdbxHbvpJ5Romunz51Ih3y_EZ3CO-edDdNBb345VQ-ujFTRYrJHE2KlMrN4Zck5gI7ApHH_FfztRvu6yYVIvnpsuhKQjgFzrAxCoPYzpTnwRMFwpi20Kp7pfi93KZ3kcWRkjFt2p-EhB63ekuuGb73xLCWa4mRiOSGhR3r25l4-N9ezZCYNJp0j_mhO19Dg",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJDWIIngJu5kcR2UKiMUOfTWM",
+      "reference": "CmRRAAAAZTVM5A-ku6YRxFV4jQ_jEpsnuvjt9qOMLEJHkZ6EyGtIX5SK4klfpBs5tHT1nvhRraCq_KTTMA6wkyCjZrQo1JsZ6EEQKIm83pm2jMgGuep5dYHK_x0VRy3g18G-_zrIEhCQIWnkUTuZrFRl34Njbh7AGhSRV1M1UJiyP_unTq2VZAoG4p40xg",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "23 Rue de Rivoli, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.85012819999999,
+          "lng": 2.347582699999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.8501978,
+            "lng": 2.347774650000001
+          },
+          "southwest": {
+            "lat": 48.85004660000001,
+            "lng": 2.347318849999999
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "dad32c31f07ec9d4172e94ca139694423a67510b",
+      "name": "HSBC",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJJa_QxOZx5kcROAgNzebKxRM",
+      "reference": "CmRRAAAAL17vSOosb2TmaHy6hIm9MtWAgCMfOCHvY57nkp_IcB9tBxjY3xaNQe3OEeTdMDdPLw2gcO1X5wvqTaWF10zEX5wu5dD6yncfHyNHXyAwq-u0z_kaXZvjnPE-cKMjyhGvEhDVXV9Arnm31V-rh31oyoqnGhSlfm4qnhfOzvJCzhZoWBiAzw8YxQ",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "51 Boulevard Saint-Germain, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.8520332,
+          "lng": 2.3385461
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.85205565000001,
+            "lng": 2.33864845
+          },
+          "southwest": {
+            "lat": 48.85199984999998,
+            "lng": 2.33847705
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "2de10664caaed19590fbe8ae8b866242b60235c5",
+      "name": "HSBC France Agence",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJZyWas95x5kcR-7SdjdGN6r8",
+      "reference": "CmRSAAAAJt4xhGBMi0DN8NrUsHyusHH5I6SKKzv8tBguPIMbZXn4hYcS2LjYxF6xqRyK4vjXkZdaXf5d_AB4C6zAYZgFRARKW0SwjBcVGp8tkpktE1G1SUxWhi2RNRWk8p0YFG_uEhAkyPDjTg5gPXZ1u-_IjfVpGhQ7o95D1gvJxK9OdIXhTmfxGw-_ew",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2 Rue de l'Odéon, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.86346169999999,
+          "lng": 2.3668977
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.86348019999999,
+            "lng": 2.36707935
+          },
+          "southwest": {
+            "lat": 48.8634342,
+            "lng": 2.366352749999999
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "f5650c1dbacf884928fca81e6ade36e5d29b650e",
+      "name": "HSBC",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJqzz2JJdv5kcRwLrVu2m6-NM",
+      "reference": "CmRSAAAAOlBe_JMXQT0geNjjf_qGYwLuV9B7OwWrmtR0KRJ6IKxNhKAIG8yOhSsfRmBXm3TuX9282fmGSFohHN4IuW403yhRxYDRZL0C6Ni2gFLsJxQmKK2gGxJCOoFP2sk9KdpHEhAALnx7-wOt5P4rWMZVk_KZGhSDQwuj3pY3fn2ql8FtC3oFocb0ng",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2 Boulevard du Temple, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.8522732,
+          "lng": 2.338563799999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.85240699999999,
+            "lng": 2.3388323
+          },
+          "southwest": {
+            "lat": 48.8522286,
+            "lng": 2.338474299999999
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "b0265274030a3b5b89e085fd12b7848c8da34b1a",
+      "name": "HSBC CAE Paris Rive Gauche",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJcWDZpCNw5kcRbB84dr7WXag",
+      "reference": "CmRSAAAA28zD_En2NTsENtRvYB3L6vOIynmexu50KM5HlJD6EAn9MIkgrbk5eiYJnBQRjyx-ax4EJA4JBN23vCc2UwAlguUbDD6JI7rD2HqgGekR1Ho5mEP-7P_2NNXISUSCxN--EhDyviDwZ9zzKVkAGV_Czc1uGhTVAxx37x6siravuueyRH8_B9h15w",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "107 Boulevard Saint-Germain, Paris"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 48.8534815,
+          "lng": 2.3392867
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.85356360000001,
+            "lng": 2.33931065
+          },
+          "southwest": {
+            "lat": 48.85343959999999,
+            "lng": 2.33927765
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "f629212c9358876cd3ef82321c1a5978506f5e7c",
+      "name": "HSBC PE Paris Rive Gauche",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJ10v4wTZu5kcRZurBgEgwi9g",
+      "reference": "CmRSAAAAtWY8djcyRPIR8ceslYCP58RKyY1ixNK6DI_589g0e3rzkc_sQvGFZNMgZDk3cl4Cy7Motqx7FCdXif3Wr7jDCMY_g7A2Lm9iXdVxY5nY4frDomOrlLgjaPWaCnm_4b-LEhBCZXUK80w8ryx78wFcM1VXGhRlgfuwgjd56MaY-npFT4yMNY2JWQ",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "64 Rue Saint-André des Arts, Paris"
+    }
+  ],
+  "status": "OK"
+}

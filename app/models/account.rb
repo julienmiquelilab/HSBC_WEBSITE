@@ -9,7 +9,7 @@ class Account < ActiveRecord::Base
   belongs_to :client
 
   # VALIDATIONS
-  validates :client_id, :account_type_id, presence: true
+  validates :client_id, :account_type_id, :card_type_id, presence: true
 
 
    def to_s
