@@ -1,16 +1,15 @@
-ActiveAdmin.register BankAccount do
+ActiveAdmin.register Account do
 
-  permit_params :user_id, :balance, :category
+  permit_params :client_id, :balance
 
   index do
     id_column
     column 'Owner' do |resource|
-      link_to resource.user.full_name, admin_user_path(resource)
+      link_to resource.client.full_name, admin_client_path(resource)
     end
     column 'Balance' do |resource|
       (resource.balance/100).to_s + " €"
     end
-    column :category
 
   end
 
@@ -18,12 +17,12 @@ ActiveAdmin.register BankAccount do
     f.semantic_errors *f.object.errors.keys
 
     f.inputs "Details" do
-      f.input :user_id, as: :select, collection: user_collection
+      f.input :client_id, as: :select, collection: user_collection
       f.input :balance
-      f.input :category
     end
     actions
   end
+
   #
   # show do |user|
   #   panel "Transation" do
