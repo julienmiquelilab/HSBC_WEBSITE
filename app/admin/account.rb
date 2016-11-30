@@ -36,11 +36,20 @@ ActiveAdmin.register Account do
         row 'Owner' do |resource|
           link_to resource.client.full_name, admin_client_path(resource.client)
         end
-        row "Account Type" do |card|
-          link_to resource.account_type.kind, admin_account_type_path(resource.account_type)
+        row "Account Type" do |resource|
+          if resource.account_type
+            link_to resource.account_type.kind, admin_account_type_path(resource.account_type)
+          else
+            ' '
+          end
+
         end
-        row "Card Type" do |card|
-          link_to resource.card_type.kind, admin_card_type_path(resource.card_type)
+        row "Card Type" do |resource|
+          if resource.card_type
+            link_to resource.card_type.kind, admin_card_type_path(resource.card_type)
+          else
+            ' '
+          end
         end
         row :balance
         row :overdraft_value_max

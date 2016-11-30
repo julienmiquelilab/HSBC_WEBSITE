@@ -66,7 +66,7 @@ AccountType.create(kind: 'Compte Epargne', overdraft_max: 0, overdraft_min: 0, r
     account.overdraft_value_max = overdraft_value_max
     account.account_type = account_type
     account.client = Client.order("RANDOM()").first
-    card_type = CardType.order("RANDOM()").first
+    account.card_type = CardType.order("RANDOM()").first
   end
 end
 
