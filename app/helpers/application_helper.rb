@@ -1,13 +1,18 @@
 module ApplicationHelper
-  def bank_account_collection
-      BankAccount.all.map{|account| [[account.user.full_name, account.category].join(' - '), account.id]}
+  def account_collection
+    Account.all.map{|account| [[account.client.full_name, account.balance].join(' - '), account.id]}
   end
 
-  def user_collection
-    User.all.map{|user| [user.full_name, user.id]}
+  def client_collection
+    Client.all.map{|client| [client.full_name, client.id]}
   end
 
-  # def bank_account_category_collection
-  #
-  # end
+  def account_type_collection
+    AccountType.all.map{|type| [type.kind, type.id]}
+  end
+
+  def card_type_collection
+    CardType.all.map{|card| [card.kind, card.id]}
+  end
+
 end
