@@ -6,4 +6,6 @@ class Transfer < ActiveRecord::Base
 
   # VALIDATIONS
   validates :amount,  presence: true
+
+  
 end

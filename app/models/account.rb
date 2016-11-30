@@ -9,12 +9,10 @@ class Account < ActiveRecord::Base
   belongs_to :client
 
   # VALIDATIONS
-  validates :client_id, presence: true
+  validates :client_id, :account_type_id, presence: true
 
-  # # CATEGGORY
-  # enum category: ["Livret A", "Compte épargne"]
 
-  # def to_s
-  #   [user.full_name, category].join(' - ')
-  # end
+   def to_s
+     [client.full_name, account_type.kind].join(' - ')
+   end
 end

@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130111701) do
+ActiveRecord::Schema.define(version: 20161130143728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "account_types", force: :cascade do |t|
-    t.string  "type"
+    t.string  "kind"
     t.integer "overdraft_max"
     t.integer "overdraft_min"
     t.integer "rate"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20161130111701) do
   create_table "accounts", force: :cascade do |t|
     t.integer "balance"
     t.integer "overdraft_value_max"
-    t.integer "type_account_id"
+    t.integer "account_type_id"
     t.integer "client_id"
+    t.integer "card_type_id"
   end
 
   create_table "active_admin_comments", force: :cascade do |t|
@@ -79,9 +80,8 @@ ActiveRecord::Schema.define(version: 20161130111701) do
   end
 
   create_table "card_types", force: :cascade do |t|
-    t.integer "type"
-    t.integer "overdraft_value_max"
-    t.integer "type_account_id"
+    t.string "kind"
+    t.text   "advantages"
   end
 
   create_table "clients", force: :cascade do |t|
