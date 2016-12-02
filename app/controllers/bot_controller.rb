@@ -2,6 +2,7 @@ class BotController < ApplicationController
   protect_from_forgery with: :null_session
 
   def slack
+    SlackRequest.create(request: params)
     action = params[:result][:action]
     parameter_value = params[:result][:parameters][:process]
 

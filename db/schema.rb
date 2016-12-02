@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130143728) do
-
+ActiveRecord::Schema.define(version: 20161202234106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,6 +104,10 @@ ActiveRecord::Schema.define(version: 20161130143728) do
     t.string   "data"
     t.string   "source"
     t.string   "parameter_value"
+  end
+
+  create_table "slack_requests", force: :cascade do |t|
+    t.string "request"
   end
 
   create_table "transfers", force: :cascade do |t|
