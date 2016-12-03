@@ -3,18 +3,27 @@ class BotController < ApplicationController
 
   def slack
     SlackRequest.create(request: params)
-    action = params[:result][:action]
-    parameter_value = params[:result][:parameters][:process]
 
-    response = Response.where(action: action).where( parameter_value: parameter_value).first
+    type = params[:type]
 
-    if response
-      json_response = response.to_json
-    else
-      json_response = Response.no_response_found
+    case type.to_sym
+    when :url_verification
+      response = {
+        "challenge": params[:challenge]
+      }
     end
-    #TestMailer.api_hook_info_mailer(params, response)
-    render json: json_response
+    # action = params[:result][:action]
+    # parameter_value = params[:result][:parameters][:process]
+    #
+    # response = Response.where(action: action).where( parameter_value: parameter_value).first
+    #
+    # if response
+    #   json_response = response.to_json
+    # else
+    #   json_response = Response.no_response_found
+    # end
+    # #TestMailer.api_hook_info_mailer(params, response)
+    render json: response
 
   end
 
