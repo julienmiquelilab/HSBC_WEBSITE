@@ -4,10 +4,10 @@ class Response < ActiveRecord::Base
   # RELATIONS
 
   # VALIDATIONS
-  validates :display_text, :action, :parameter_value, presence: true
+  validates :display_text, :intent_name, :parameter_value, presence: true
 
   def to_s
-    html = "<h2>#{action}</h2>"
+    html = "<h2>#{intent_name}</h2>"
     html += " <p>#{parameter_value}</p>"
     html.html_safe
   end
@@ -30,6 +30,12 @@ class Response < ActiveRecord::Base
     }
   end
 
+  def self.find_by_intent(query)
+    response = get_intent(query)
+    intent =  response["metadata"]["intentName"]
+    Response.where(intent_name: intent).where( parameter_value: response["parameters"][intent]).first
+  end
+
   def self.send_post_request(query)
     uri = URI('https://api.api.ai/v1/query?v=20150910')
     req = Net::HTTP::Post.new(uri, headers)
@@ -43,7 +49,7 @@ class Response < ActiveRecord::Base
   end
 
   def self.get_intent(query)
-    JSON.parse(send_post_request(query).body)["result"] 
+    JSON.parse(send_post_request(query).body)["result"]
   end
 
   private
