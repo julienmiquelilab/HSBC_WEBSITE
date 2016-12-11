@@ -1,4 +1,6 @@
 class Response < ActiveRecord::Base
+  require 'net/http'
+
   # RELATIONS
 
   # VALIDATIONS
@@ -26,5 +28,39 @@ class Response < ActiveRecord::Base
       "data":         self.data,
       "source":       self.source
     }
+  end
+
+  def self.send_post_request(query)
+    uri = URI('https://api.api.ai/v1/query?v=20150910')
+    req = Net::HTTP::Post.new(uri, headers)
+    req.body = data(query).to_json
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.start do |http|
+      http.request(req)
+    end
+
+  end
+
+  def self.get_intent(query)
+    JSON.parse(send_post_request(query).body)["result"] 
+  end
+
+  private
+  def self.data(query)
+    {
+      "query": [
+        query
+      ],
+      "lang": "fr",
+      "sessionId": rand(10 ** 10)
+    }
+  end
+
+  def self.headers
+    {
+       'Content-Type': 'application/json',
+       'Authorization': "Bearer #{ENV['API_AI_TOKEN']}"
+     }
   end
 end

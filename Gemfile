@@ -13,9 +13,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "rails-erd"
 gem 'faker'
+gem 'slack-ruby-client'
+gem 'faye-websocket'
+
 
 group :development, :test do
-
+gem 'httplog'
 gem 'byebug'
 gem 'web-console', '~> 2.0'
 gem "better_errors"
