@@ -1,6 +1,6 @@
 ActiveAdmin.register Transfer do
 
-  permit_params :amount, :description, :receiver_account_id, :sender_account_id
+  permit_params :amount, :description, :receiver_account_id, :sender_account_id, :date
 
   index do
     id_column
@@ -11,6 +11,7 @@ ActiveAdmin.register Transfer do
       link_to(resource.sender_account, admin_account_path(resource.sender_account))
     end
     column :amount
+    column :date
 
 
   end
@@ -21,6 +22,7 @@ ActiveAdmin.register Transfer do
     f.inputs "Details" do
       f.input :amount
       f.input :description
+      f.input :date, as: :datetime_picker
       f.input :sender_account_id, as: :select, collection: account_collection, required: true
       f.input :receiver_account_id, as: :select, collection: account_collection, required: true
     end
@@ -37,6 +39,7 @@ ActiveAdmin.register Transfer do
           link_to resource.sender_account.client.full_name, admin_client_path(resource)
         end
         row :amount
+        row :date
         row :description
       end
     end
