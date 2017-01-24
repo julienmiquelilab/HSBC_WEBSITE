@@ -1,5 +1,6 @@
 class Intent < ActiveRecord::Base
   has_many :utterances
+  accepts_nested_attributes_for :utterances
 
 
   def to_json(options={})
