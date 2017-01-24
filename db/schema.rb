@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116180637) do
+ActiveRecord::Schema.define(version: 20170124084844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,10 +112,11 @@ ActiveRecord::Schema.define(version: 20170116180637) do
   end
 
   create_table "transfers", force: :cascade do |t|
-    t.integer "amount"
-    t.text    "description"
-    t.integer "receiver_account_id"
-    t.integer "sender_account_id"
+    t.integer  "amount"
+    t.text     "description"
+    t.integer  "receiver_account_id"
+    t.integer  "sender_account_id"
+    t.datetime "date"
   end
 
 end
