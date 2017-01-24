@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'response#index'
+   root 'application#home'
+
+   get 'intents' => 'intents#index'
+   get 'intents/:id' => 'intents#show'
+   post 'intents/:id/utterances' => 'utterances#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
