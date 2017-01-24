@@ -19,7 +19,7 @@ class Intent < ActiveRecord::Base
     {
       label: id,
       utterances: utterances.map(&:to_s),
-      reponse: response_text
+      response: response_text
     }
   end
 
