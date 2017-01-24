@@ -1,5 +1,5 @@
 class Intent < ActiveRecord::Base
-  has_many :utterances
+  has_many :utterances, dependent: :destroy
   accepts_nested_attributes_for :utterances
 
 

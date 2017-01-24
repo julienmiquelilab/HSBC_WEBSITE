@@ -3,10 +3,10 @@ ActiveAdmin.register Intent do
 
   index do
     id_column
-    column :response_text
     column '1st utterance' do |resource|
       resource.utterances.first
     end
+    column :response_text
   end
 
   form do |f|

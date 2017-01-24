@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
    get 'intents' => 'intents#index'
    get 'intents/:id' => 'intents#show'
+   post 'intents' => 'intents#create'
    post 'intents/:id/utterances' => 'utterances#create'
 
   # Example of regular route:
