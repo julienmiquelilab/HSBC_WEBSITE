@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170124084844) do
+ActiveRecord::Schema.define(version: 20170124171121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,10 @@ ActiveRecord::Schema.define(version: 20170124084844) do
     t.string  "token"
   end
 
+  create_table "intents", force: :cascade do |t|
+    t.string "response_text"
+  end
+
   create_table "responses", force: :cascade do |t|
     t.string   "intent_name"
     t.datetime "created_at",      null: false
@@ -107,10 +111,6 @@ ActiveRecord::Schema.define(version: 20170124084844) do
     t.string   "parameter_value"
   end
 
-  create_table "slack_requests", force: :cascade do |t|
-    t.string "request"
-  end
-
   create_table "transfers", force: :cascade do |t|
     t.integer  "amount"
     t.text     "description"
@@ -119,4 +119,17 @@ ActiveRecord::Schema.define(version: 20170124084844) do
     t.datetime "date"
   end
 
+  create_table "user_questions", force: :cascade do |t|
+    t.string   "asked_question"
+    t.string   "retrieved_response"
+    t.boolean  "is_correct"
+    t.datetime "date"
+  end
+
+  create_table "utterances", force: :cascade do |t|
+    t.string  "text"
+    t.integer "intent_id"
+  end
+
+  add_foreign_key "utterances", "intents"
 end
