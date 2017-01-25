@@ -8,6 +8,6 @@ class Transfer < ActiveRecord::Base
   validates :amount, :receiver_account, presence: true
 
   def to_s
-    "#{amount}€ from #{sender_account.client.full_name} to #{receiver_account.client.full_name}"
+    "#{amount}€ #{receiver_account.client.full_name}"
   end
 end
