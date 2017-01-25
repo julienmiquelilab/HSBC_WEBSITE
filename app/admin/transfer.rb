@@ -7,8 +7,13 @@ ActiveAdmin.register Transfer do
     column 'Receiver' do |resource|
       link_to(resource.receiver_account, admin_account_path(resource.receiver_account))
     end
+    column :description
     column 'Sender' do |resource|
-      link_to(resource.sender_account, admin_account_path(resource.sender_account))
+      if resource.sender_account
+        link_to(resource.sender_account, admin_account_path(resource.sender_account))
+      else
+        "Unknown"
+      end
     end
     column :amount
     column :date
