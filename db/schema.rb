@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170124171121) do
+ActiveRecord::Schema.define(version: 20170127154021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,7 +97,9 @@ ActiveRecord::Schema.define(version: 20170124171121) do
   end
 
   create_table "intents", force: :cascade do |t|
-    t.string "response_text"
+    t.string  "response_text"
+    t.boolean "feedback_yes"
+    t.boolean "feedback_no"
   end
 
   create_table "responses", force: :cascade do |t|
