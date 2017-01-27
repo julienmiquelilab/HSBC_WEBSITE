@@ -1,5 +1,5 @@
 ActiveAdmin.register Intent do
-  permit_params :response_text, :id, utterances_attributes: [:id, :text]
+  permit_params :response_text, :id, :feedback_yes ,:feedback_no, utterances_attributes: [:id, :text]
 
   index do
     id_column
@@ -17,6 +17,8 @@ ActiveAdmin.register Intent do
       f.has_many :utterances, heading: 'Utterances', allow_destroy: true, new_record: "Add Utterance" do |u|
         u.input :text
       end
+      f.input :feedback_yes
+      f.input :feedback_no
 
     end
     actions
@@ -27,6 +29,8 @@ ActiveAdmin.register Intent do
     panel "Intent" do
       attributes_table_for resource do
         row :response_text
+        row :feedback_yes
+        row :feedback_no
       end
         table_for resource.utterances do
           column "Utterances", :text
