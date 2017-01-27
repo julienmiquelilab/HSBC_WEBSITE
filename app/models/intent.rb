@@ -10,23 +10,24 @@ class Intent < ActiveRecord::Base
   end
 
   def to_json(options={})
-    params_as_hash.to_json
+    attributes_as_hash.to_json
   end
 
   def self.to_json
     hash = {intents: []}
     Intent.all.each do |intent|
-      hash[:intents] << intent.params_as_hash
+      hash[:intents] << intent.attributes_as_hash
     end
     hash.to_json
   end
 
-  def params_as_hash
+  def attributes_as_hash
     {
       label: id,
       utterances: utterances.map(&:to_s),
-      response: response_text
+      response: response_text,
+      feedback_no: feedback_no || false,
+      feedback_yes: feedback_yes || false
     }
   end
-
 end
