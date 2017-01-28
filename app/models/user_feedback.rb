@@ -1,4 +1,4 @@
-class UserQuestion < ActiveRecord::Base
+class UserFeedback < ActiveRecord::Base
 
   def to_json(options= {})
     {

@@ -1,4 +1,6 @@
 ActiveAdmin.register Intent do
+  menu parent: "Sujet 2"
+
   permit_params :response_text, :id, :feedback_yes ,:feedback_no, utterances_attributes: [:id, :text]
 
   index do
