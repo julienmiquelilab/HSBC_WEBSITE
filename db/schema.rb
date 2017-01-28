@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170128192159) do
+ActiveRecord::Schema.define(version: 20170128205029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,9 +97,11 @@ ActiveRecord::Schema.define(version: 20170128192159) do
   end
 
   create_table "intents", force: :cascade do |t|
-    t.string  "response_text"
-    t.boolean "feedback_yes"
-    t.boolean "feedback_no"
+    t.string   "response_text"
+    t.boolean  "feedback_yes"
+    t.boolean  "feedback_no"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "transfers", force: :cascade do |t|
@@ -118,8 +120,10 @@ ActiveRecord::Schema.define(version: 20170128192159) do
   end
 
   create_table "utterances", force: :cascade do |t|
-    t.string  "text"
-    t.integer "intent_id"
+    t.string   "text"
+    t.integer  "intent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_foreign_key "utterances", "intents"

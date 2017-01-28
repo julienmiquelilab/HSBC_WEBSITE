@@ -20,6 +20,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    active_skin (0.0.12)
     activeadmin (1.0.0.pre4)
       arbre (~> 1.0, >= 1.0.2)
       bourbon
@@ -65,6 +66,7 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (9.0.6)
+    chartkick (2.2.2)
     choice (0.2.0)
     coderay (1.1.1)
     coffee-rails (4.1.1)
@@ -103,6 +105,8 @@ GEM
     gli (2.14.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    groupdate (3.1.1)
+      activesupport (>= 3)
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -236,14 +240,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_skin
   activeadmin (~> 1.0.0.pre4)
   better_errors
   byebug
+  chartkick
   coffee-rails (~> 4.1.0)
   devise
   faker
   faye-websocket
   figaro
+  groupdate
   httplog
   jbuilder (~> 2.0)
   jquery-rails

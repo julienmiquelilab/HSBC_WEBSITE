@@ -15,6 +15,9 @@ gem "rails-erd"
 gem 'faker'
 gem 'slack-ruby-client'
 gem 'faye-websocket'
+gem 'active_skin'
+gem 'chartkick'
+gem 'groupdate'
 
 
 group :development, :test do

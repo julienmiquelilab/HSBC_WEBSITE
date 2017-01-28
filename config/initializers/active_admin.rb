@@ -128,6 +128,9 @@ ActiveAdmin.setup do |config|
   #
   # You can completely disable comments:
    config.comments = false
+
+   config.register_javascript 'https://www.google.com/jsapi'
+
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
