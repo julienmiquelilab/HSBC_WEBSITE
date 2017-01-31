@@ -1,4 +1,5 @@
 class UserFeedback < ActiveRecord::Base
+  extend Reusable
 
   def to_json(options= {})
     {

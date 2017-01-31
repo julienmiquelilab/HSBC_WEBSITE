@@ -1,7 +1,9 @@
 class Intent < ActiveRecord::Base
+  extend Reusable
   has_many :utterances, dependent: :destroy
   accepts_nested_attributes_for :utterances
   validate :check_feedback_arguments
+
 
   def check_feedback_arguments
     if feedback_no && feedback_yes
