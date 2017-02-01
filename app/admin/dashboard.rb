@@ -7,7 +7,7 @@ ActiveAdmin.register_page "Dashboard" do
     columns do
       column do
         panel "Pourcentage de bonne réponse du bot" do
-          pie_chart UserFeedback.group(:is_correct).count
+          pie_chart UserFeedback.group(:is_correct).count.transform_keys{ |key| key == true ? "Bonnes réponses" : "Mauvaises réponses" }
         end
       end
       column do
@@ -24,10 +24,9 @@ ActiveAdmin.register_page "Dashboard" do
       end
       column do
         panel "Nombre moyen d'utterances pour chaque intent" do
-          puts Utterance.get_ratio_with_intent
-        line_chart Utterance.get_ratio_with_intent
+          line_chart Utterance.get_ratio_with_intent
+        end
       end
     end
   end
-end
 end
