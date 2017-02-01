@@ -2703,7 +2703,7 @@ body.active_admin {
 /* line 28, /home/louis/.rvm/gems/ruby-2.3.1/gems/active_skin-0.0.12/app/assets/stylesheets/active_skin.sass */
 #header h1.site_title {
   background-color: #fff;
-  background: url("hsbc-logo.png") no-repeat 0 0;
+  background: url("/assets/hsbc-logo-d4a3f4f3a7a05a4fd78c3055a05fceb2ee34d07317076ad969aae4d6bf6653eb.png") no-repeat 0 0;
   padding-left: 130px;
   color: #1e2a33;
   text-indent: -999999px;
