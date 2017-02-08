@@ -11,7 +11,7 @@ Rails.application.routes.draw do
    get 'intents/:id' => 'intents#show'
    post 'intents' => 'intents#create'
    post 'intents/:id/utterances' => 'utterances#create'
-   post 'feedback' => 'user_feedback#create'
+   post 'feedback' => 'user_feedbacks#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
