@@ -5,10 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-
-Faker::Config.locale = 'fr'
 [Agency, Advisor, Client, CardType, AccountType, Transfer, Account].map{|model| model.destroy_all}
+
+if AdminUser.all.size == 0
+  AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+end
+Faker::Config.locale = 'fr'
 # Create Agencies
 agencies = JSON.parse(File.read("agencies.json"))
 6.times do |i|
