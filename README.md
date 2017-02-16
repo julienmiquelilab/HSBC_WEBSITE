@@ -15,7 +15,7 @@ Il contient une API permettant de gérer les intents et utterances nécessaire a
 * Télécharger et installer Heroku CLI qui permet de lancer des commandes sur le serveur distant
 * Une fois installé lancer les commandes suivantes:
 	* heroku login (entrez vos credentials)
-	* heroku run --app <app-name> rake db:setup
+	* heroku run --app {app-name} rake db:setup
 
-Pour accéder au site l’url est: https://<app-name>.herokuapp.com/admin
+Pour accéder au site l’url est: https://{app-name}.herokuapp.com/admin
 Les credentials par défaut sont admin@example.com / password
