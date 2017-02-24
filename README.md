@@ -1,5 +1,5 @@
 Ce site web est utilisé pour un projet de fin d'étude avec HSBC.
-Il contient une API permettant de gérer les intents et utterances nécessaire au machine learning d'un chat bot.
+Il contient une API permettant de gérer les intents et utterances nécessaire au machine learning d'un chat bot & Amazon Echo
 
 
 # Mise en place de la base de données et du site sur heroku
